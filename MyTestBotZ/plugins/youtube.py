@@ -15,7 +15,7 @@ ytregex = r"^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[
 @Client.on_message(Filters.regex(ytregex))
 async def ytdl(bot, message):
     #if message.from_user.id not in AUTH_USERS:
-        return
+        #return
     userLastDownloadTime = user_time.get(message.chat.id)
     try:
         if userLastDownloadTime > datetime.now():
