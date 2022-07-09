@@ -7,14 +7,14 @@ import wget
 import os
 from PIL import Image
 from pyrogram.errors import UserNotParticipant, UserBannedInChannel
-AUTH_USERS = set(int(x) for x in os.environ.get("AUTH_USERS", "1248974748 1401477467").split())
+#AUTH_USERS = set(int(x) for x in os.environ.get("AUTH_USERS", "1248974748 1401477467").split())
 
     
 ytregex = r"^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$"
 
 @Client.on_message(Filters.regex(ytregex))
 async def ytdl(bot, message):
-    if message.from_user.id not in AUTH_USERS:
+    #if message.from_user.id not in AUTH_USERS:
         return
     userLastDownloadTime = user_time.get(message.chat.id)
     try:
